@@ -1,8 +1,10 @@
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { useEffect } from "react";
 import Footer from "#/components/common/footer";
 import Header from "#/components/common/header";
+import { hydrateEnquiryList } from "#/lib/enquiry/enquiry-store";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -34,6 +36,9 @@ export const Route = createRootRoute({
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+	useEffect(() => {
+		hydrateEnquiryList();
+	}, []);
 	return (
 		<html lang="en">
 			<head>

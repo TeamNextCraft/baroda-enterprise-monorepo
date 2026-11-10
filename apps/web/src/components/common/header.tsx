@@ -1,6 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
-import { ArrowRight, Flame, Menu, ShieldCheck } from "lucide-react";
+import {
+	ArrowRight,
+	ClipboardList,
+	Flame,
+	Menu,
+	ShieldCheck,
+} from "lucide-react";
 import * as React from "react";
 import { Button } from "#/components/ui/button";
 import {
@@ -9,6 +15,7 @@ import {
 	serviceItems,
 	surveillanceSystems,
 } from "#/lib/constants";
+import { useEnquiry } from "#/lib/hooks/use-enquiry";
 import {
 	Accordion,
 	AccordionContent,
@@ -210,6 +217,7 @@ function MobileGroup({
 export default function Header() {
 	const [open, setOpen] = React.useState(false);
 	const closeMenu = () => setOpen(false);
+	const { count, hydrated } = useEnquiry();
 
 	// These arrays are enriched with image paths and descriptions in constants.ts.
 	const products = productItems as NavigationCardItem[];
@@ -360,7 +368,22 @@ export default function Header() {
 					</NavigationMenu>
 				</div>
 
-				<div className="hidden shrink-0 xl:block">
+				<div className="hidden shrink-0 items-center gap-2 xl:flex">
+					<Button asChild variant="outline" size="icon" className="relative">
+						<Link
+							to="/enquiry-list"
+							aria-label={`My enquiry list: ${count} selected items`}
+						>
+							<ClipboardList className="h-5 w-5" />
+
+							{hydrated && count > 0 && (
+								<span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-bold text-primary-foreground">
+									{count}
+								</span>
+							)}
+						</Link>
+					</Button>
+
 					<Button asChild size="sm">
 						<Link to="/contact-us">Request a Quote</Link>
 					</Button>
@@ -465,6 +488,26 @@ export default function Header() {
 								</Link>
 
 								<div className="mt-3 border-t border-(--line) pt-4">
+									<Button
+										asChild
+										variant="outline"
+										size="icon"
+										className="relative"
+									>
+										<Link
+											to="/enquiry-list"
+											aria-label={`My enquiry list: ${count} selected items`}
+										>
+											<ClipboardList className="h-5 w-5" />
+
+											{hydrated && count > 0 && (
+												<span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-bold text-primary-foreground">
+													{count}
+												</span>
+											)}
+										</Link>
+									</Button>
+
 									<Button asChild className="w-full">
 										<Link to="/contact-us" onClick={closeMenu}>
 											Request a Quote

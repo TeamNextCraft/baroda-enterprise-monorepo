@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
+import { Route as EnquiryListRouteImport } from './routes/enquiry-list'
 import { Route as FireSafetyCommercialRouteImport } from './routes/fire-safety/commercial'
 import { Route as FireSafetyFireDetectionRouteImport } from './routes/fire-safety/fire-detection'
 import { Route as FireSafetyFireExtinguishersRouteImport } from './routes/fire-safety/fire-extinguishers'
@@ -47,6 +48,11 @@ const AboutRoute = AboutRouteImport.update({
 const ContactUsRoute = ContactUsRouteImport.update({
   id: '/contact-us',
   path: '/contact-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnquiryListRoute = EnquiryListRouteImport.update({
+  id: '/enquiry-list',
+  path: '/enquiry-list',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FireSafetyCommercialRoute = FireSafetyCommercialRouteImport.update({
@@ -176,6 +182,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact-us': typeof ContactUsRoute
+  '/enquiry-list': typeof EnquiryListRoute
   '/fire-safety/commercial': typeof FireSafetyCommercialRoute
   '/fire-safety/fire-detection': typeof FireSafetyFireDetectionRoute
   '/fire-safety/fire-extinguishers': typeof FireSafetyFireExtinguishersRoute
@@ -202,6 +209,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact-us': typeof ContactUsRoute
+  '/enquiry-list': typeof EnquiryListRoute
   '/fire-safety/commercial': typeof FireSafetyCommercialRoute
   '/fire-safety/fire-detection': typeof FireSafetyFireDetectionRoute
   '/fire-safety/fire-extinguishers': typeof FireSafetyFireExtinguishersRoute
@@ -229,6 +237,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact-us': typeof ContactUsRoute
+  '/enquiry-list': typeof EnquiryListRoute
   '/fire-safety/commercial': typeof FireSafetyCommercialRoute
   '/fire-safety/fire-detection': typeof FireSafetyFireDetectionRoute
   '/fire-safety/fire-extinguishers': typeof FireSafetyFireExtinguishersRoute
@@ -257,6 +266,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact-us'
+    | '/enquiry-list'
     | '/fire-safety/commercial'
     | '/fire-safety/fire-detection'
     | '/fire-safety/fire-extinguishers'
@@ -283,6 +293,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact-us'
+    | '/enquiry-list'
     | '/fire-safety/commercial'
     | '/fire-safety/fire-detection'
     | '/fire-safety/fire-extinguishers'
@@ -309,6 +320,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact-us'
+    | '/enquiry-list'
     | '/fire-safety/commercial'
     | '/fire-safety/fire-detection'
     | '/fire-safety/fire-extinguishers'
@@ -336,6 +348,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactUsRoute: typeof ContactUsRoute
+  EnquiryListRoute: typeof EnquiryListRoute
   FireSafetyCommercialRoute: typeof FireSafetyCommercialRoute
   FireSafetyFireDetectionRoute: typeof FireSafetyFireDetectionRoute
   FireSafetyFireExtinguishersRoute: typeof FireSafetyFireExtinguishersRoute
@@ -380,6 +393,13 @@ declare module '@tanstack/react-router' {
       path: '/contact-us'
       fullPath: '/contact-us'
       preLoaderRoute: typeof ContactUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enquiry-list': {
+      id: '/enquiry-list'
+      path: '/enquiry-list'
+      fullPath: '/enquiry-list'
+      preLoaderRoute: typeof EnquiryListRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/fire-safety/commercial': {
@@ -536,6 +556,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactUsRoute: ContactUsRoute,
+  EnquiryListRoute: EnquiryListRoute,
   FireSafetyCommercialRoute: FireSafetyCommercialRoute,
   FireSafetyFireDetectionRoute: FireSafetyFireDetectionRoute,
   FireSafetyFireExtinguishersRoute: FireSafetyFireExtinguishersRoute,
