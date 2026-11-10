@@ -10,13 +10,38 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
+import { Route as FireSafetyCommercialRouteImport } from './routes/fire-safety/commercial'
+import { Route as FireSafetyFireDetectionRouteImport } from './routes/fire-safety/fire-detection'
+import { Route as FireSafetyFireExtinguishersRouteImport } from './routes/fire-safety/fire-extinguishers'
+import { Route as FireSafetyFireSuppressionRouteImport } from './routes/fire-safety/fire-suppression'
+import { Route as FireSafetyHydrantSprinklerRouteImport } from './routes/fire-safety/hydrant-sprinkler'
+import { Route as FireSafetyMaintenanceRouteImport } from './routes/fire-safety/maintenance'
+import { Route as FireSafetyIndustrialIndexRouteImport } from './routes/fire-safety/industrial/index'
+import { Route as FireSafetyResidentialIndexRouteImport } from './routes/fire-safety/residential/index'
+import { Route as ProductsHardwareComponentsIndexRouteImport } from './routes/products/hardware-components/index'
 import { Route as ProductsPrintingAndImagingIndexRouteImport } from './routes/products/printing-and-imaging/index'
+import { Route as ProductsSoftwareLicensingIndexRouteImport } from './routes/products/software-licensing/index'
 import { Route as ProductsSystemIntegrationsIndexRouteImport } from './routes/products/system-integrations/index'
+import { Route as ServicesAmcIndexRouteImport } from './routes/services/amc/index'
+import { Route as ServicesBackupSolutionsIndexRouteImport } from './routes/services/backup-solutions/index'
+import { Route as ServicesCoreNetworkingIndexRouteImport } from './routes/services/core-networking/index'
+import { Route as ServicesEnterpriseSecurityIndexRouteImport } from './routes/services/enterprise-security/index'
+import { Route as ServicesItInfrastructureIndexRouteImport } from './routes/services/it-infrastructure/index'
+import { Route as SurveillanceAccessControlSystemsIndexRouteImport } from './routes/surveillance/access-control-systems/index'
+import { Route as SurveillanceBiometricRfidSolutionsIndexRouteImport } from './routes/surveillance/biometric-rfid-solutions/index'
+import { Route as SurveillanceCctvSolutionsIndexRouteImport } from './routes/surveillance/cctv-solutions/index'
+import { Route as SurveillanceNetworkSurveillanceSolutionsIndexRouteImport } from './routes/surveillance/network-surveillance-solutions/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactUsRoute = ContactUsRouteImport.update({
@@ -24,10 +49,67 @@ const ContactUsRoute = ContactUsRouteImport.update({
   path: '/contact-us',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FireSafetyCommercialRoute = FireSafetyCommercialRouteImport.update({
+  id: '/fire-safety/commercial',
+  path: '/fire-safety/commercial',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FireSafetyFireDetectionRoute = FireSafetyFireDetectionRouteImport.update({
+  id: '/fire-safety/fire-detection',
+  path: '/fire-safety/fire-detection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FireSafetyFireExtinguishersRoute =
+  FireSafetyFireExtinguishersRouteImport.update({
+    id: '/fire-safety/fire-extinguishers',
+    path: '/fire-safety/fire-extinguishers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FireSafetyFireSuppressionRoute =
+  FireSafetyFireSuppressionRouteImport.update({
+    id: '/fire-safety/fire-suppression',
+    path: '/fire-safety/fire-suppression',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FireSafetyHydrantSprinklerRoute =
+  FireSafetyHydrantSprinklerRouteImport.update({
+    id: '/fire-safety/hydrant-sprinkler',
+    path: '/fire-safety/hydrant-sprinkler',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FireSafetyMaintenanceRoute = FireSafetyMaintenanceRouteImport.update({
+  id: '/fire-safety/maintenance',
+  path: '/fire-safety/maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FireSafetyIndustrialIndexRoute =
+  FireSafetyIndustrialIndexRouteImport.update({
+    id: '/fire-safety/industrial/',
+    path: '/fire-safety/industrial/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FireSafetyResidentialIndexRoute =
+  FireSafetyResidentialIndexRouteImport.update({
+    id: '/fire-safety/residential/',
+    path: '/fire-safety/residential/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsHardwareComponentsIndexRoute =
+  ProductsHardwareComponentsIndexRouteImport.update({
+    id: '/products/hardware-components/',
+    path: '/products/hardware-components/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProductsPrintingAndImagingIndexRoute =
   ProductsPrintingAndImagingIndexRouteImport.update({
     id: '/products/printing-and-imaging/',
     path: '/products/printing-and-imaging/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsSoftwareLicensingIndexRoute =
+  ProductsSoftwareLicensingIndexRouteImport.update({
+    id: '/products/software-licensing/',
+    path: '/products/software-licensing/',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ProductsSystemIntegrationsIndexRoute =
@@ -36,52 +118,245 @@ const ProductsSystemIntegrationsIndexRoute =
     path: '/products/system-integrations/',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ServicesAmcIndexRoute = ServicesAmcIndexRouteImport.update({
+  id: '/services/amc/',
+  path: '/services/amc/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesBackupSolutionsIndexRoute =
+  ServicesBackupSolutionsIndexRouteImport.update({
+    id: '/services/backup-solutions/',
+    path: '/services/backup-solutions/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesCoreNetworkingIndexRoute =
+  ServicesCoreNetworkingIndexRouteImport.update({
+    id: '/services/core-networking/',
+    path: '/services/core-networking/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesEnterpriseSecurityIndexRoute =
+  ServicesEnterpriseSecurityIndexRouteImport.update({
+    id: '/services/enterprise-security/',
+    path: '/services/enterprise-security/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesItInfrastructureIndexRoute =
+  ServicesItInfrastructureIndexRouteImport.update({
+    id: '/services/it-infrastructure/',
+    path: '/services/it-infrastructure/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SurveillanceAccessControlSystemsIndexRoute =
+  SurveillanceAccessControlSystemsIndexRouteImport.update({
+    id: '/surveillance/access-control-systems/',
+    path: '/surveillance/access-control-systems/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SurveillanceBiometricRfidSolutionsIndexRoute =
+  SurveillanceBiometricRfidSolutionsIndexRouteImport.update({
+    id: '/surveillance/biometric-rfid-solutions/',
+    path: '/surveillance/biometric-rfid-solutions/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SurveillanceCctvSolutionsIndexRoute =
+  SurveillanceCctvSolutionsIndexRouteImport.update({
+    id: '/surveillance/cctv-solutions/',
+    path: '/surveillance/cctv-solutions/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SurveillanceNetworkSurveillanceSolutionsIndexRoute =
+  SurveillanceNetworkSurveillanceSolutionsIndexRouteImport.update({
+    id: '/surveillance/network-surveillance-solutions/',
+    path: '/surveillance/network-surveillance-solutions/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/contact-us': typeof ContactUsRoute
+  '/fire-safety/commercial': typeof FireSafetyCommercialRoute
+  '/fire-safety/fire-detection': typeof FireSafetyFireDetectionRoute
+  '/fire-safety/fire-extinguishers': typeof FireSafetyFireExtinguishersRoute
+  '/fire-safety/fire-suppression': typeof FireSafetyFireSuppressionRoute
+  '/fire-safety/hydrant-sprinkler': typeof FireSafetyHydrantSprinklerRoute
+  '/fire-safety/maintenance': typeof FireSafetyMaintenanceRoute
+  '/fire-safety/industrial/': typeof FireSafetyIndustrialIndexRoute
+  '/fire-safety/residential/': typeof FireSafetyResidentialIndexRoute
+  '/products/hardware-components/': typeof ProductsHardwareComponentsIndexRoute
   '/products/printing-and-imaging/': typeof ProductsPrintingAndImagingIndexRoute
+  '/products/software-licensing/': typeof ProductsSoftwareLicensingIndexRoute
   '/products/system-integrations/': typeof ProductsSystemIntegrationsIndexRoute
+  '/services/amc/': typeof ServicesAmcIndexRoute
+  '/services/backup-solutions/': typeof ServicesBackupSolutionsIndexRoute
+  '/services/core-networking/': typeof ServicesCoreNetworkingIndexRoute
+  '/services/enterprise-security/': typeof ServicesEnterpriseSecurityIndexRoute
+  '/services/it-infrastructure/': typeof ServicesItInfrastructureIndexRoute
+  '/surveillance/access-control-systems/': typeof SurveillanceAccessControlSystemsIndexRoute
+  '/surveillance/biometric-rfid-solutions/': typeof SurveillanceBiometricRfidSolutionsIndexRoute
+  '/surveillance/cctv-solutions/': typeof SurveillanceCctvSolutionsIndexRoute
+  '/surveillance/network-surveillance-solutions/': typeof SurveillanceNetworkSurveillanceSolutionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/contact-us': typeof ContactUsRoute
+  '/fire-safety/commercial': typeof FireSafetyCommercialRoute
+  '/fire-safety/fire-detection': typeof FireSafetyFireDetectionRoute
+  '/fire-safety/fire-extinguishers': typeof FireSafetyFireExtinguishersRoute
+  '/fire-safety/fire-suppression': typeof FireSafetyFireSuppressionRoute
+  '/fire-safety/hydrant-sprinkler': typeof FireSafetyHydrantSprinklerRoute
+  '/fire-safety/maintenance': typeof FireSafetyMaintenanceRoute
+  '/fire-safety/industrial': typeof FireSafetyIndustrialIndexRoute
+  '/fire-safety/residential': typeof FireSafetyResidentialIndexRoute
+  '/products/hardware-components': typeof ProductsHardwareComponentsIndexRoute
   '/products/printing-and-imaging': typeof ProductsPrintingAndImagingIndexRoute
+  '/products/software-licensing': typeof ProductsSoftwareLicensingIndexRoute
   '/products/system-integrations': typeof ProductsSystemIntegrationsIndexRoute
+  '/services/amc': typeof ServicesAmcIndexRoute
+  '/services/backup-solutions': typeof ServicesBackupSolutionsIndexRoute
+  '/services/core-networking': typeof ServicesCoreNetworkingIndexRoute
+  '/services/enterprise-security': typeof ServicesEnterpriseSecurityIndexRoute
+  '/services/it-infrastructure': typeof ServicesItInfrastructureIndexRoute
+  '/surveillance/access-control-systems': typeof SurveillanceAccessControlSystemsIndexRoute
+  '/surveillance/biometric-rfid-solutions': typeof SurveillanceBiometricRfidSolutionsIndexRoute
+  '/surveillance/cctv-solutions': typeof SurveillanceCctvSolutionsIndexRoute
+  '/surveillance/network-surveillance-solutions': typeof SurveillanceNetworkSurveillanceSolutionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/contact-us': typeof ContactUsRoute
+  '/fire-safety/commercial': typeof FireSafetyCommercialRoute
+  '/fire-safety/fire-detection': typeof FireSafetyFireDetectionRoute
+  '/fire-safety/fire-extinguishers': typeof FireSafetyFireExtinguishersRoute
+  '/fire-safety/fire-suppression': typeof FireSafetyFireSuppressionRoute
+  '/fire-safety/hydrant-sprinkler': typeof FireSafetyHydrantSprinklerRoute
+  '/fire-safety/maintenance': typeof FireSafetyMaintenanceRoute
+  '/fire-safety/industrial/': typeof FireSafetyIndustrialIndexRoute
+  '/fire-safety/residential/': typeof FireSafetyResidentialIndexRoute
+  '/products/hardware-components/': typeof ProductsHardwareComponentsIndexRoute
   '/products/printing-and-imaging/': typeof ProductsPrintingAndImagingIndexRoute
+  '/products/software-licensing/': typeof ProductsSoftwareLicensingIndexRoute
   '/products/system-integrations/': typeof ProductsSystemIntegrationsIndexRoute
+  '/services/amc/': typeof ServicesAmcIndexRoute
+  '/services/backup-solutions/': typeof ServicesBackupSolutionsIndexRoute
+  '/services/core-networking/': typeof ServicesCoreNetworkingIndexRoute
+  '/services/enterprise-security/': typeof ServicesEnterpriseSecurityIndexRoute
+  '/services/it-infrastructure/': typeof ServicesItInfrastructureIndexRoute
+  '/surveillance/access-control-systems/': typeof SurveillanceAccessControlSystemsIndexRoute
+  '/surveillance/biometric-rfid-solutions/': typeof SurveillanceBiometricRfidSolutionsIndexRoute
+  '/surveillance/cctv-solutions/': typeof SurveillanceCctvSolutionsIndexRoute
+  '/surveillance/network-surveillance-solutions/': typeof SurveillanceNetworkSurveillanceSolutionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/contact-us'
+    | '/fire-safety/commercial'
+    | '/fire-safety/fire-detection'
+    | '/fire-safety/fire-extinguishers'
+    | '/fire-safety/fire-suppression'
+    | '/fire-safety/hydrant-sprinkler'
+    | '/fire-safety/maintenance'
+    | '/fire-safety/industrial/'
+    | '/fire-safety/residential/'
+    | '/products/hardware-components/'
     | '/products/printing-and-imaging/'
+    | '/products/software-licensing/'
     | '/products/system-integrations/'
+    | '/services/amc/'
+    | '/services/backup-solutions/'
+    | '/services/core-networking/'
+    | '/services/enterprise-security/'
+    | '/services/it-infrastructure/'
+    | '/surveillance/access-control-systems/'
+    | '/surveillance/biometric-rfid-solutions/'
+    | '/surveillance/cctv-solutions/'
+    | '/surveillance/network-surveillance-solutions/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/contact-us'
+    | '/fire-safety/commercial'
+    | '/fire-safety/fire-detection'
+    | '/fire-safety/fire-extinguishers'
+    | '/fire-safety/fire-suppression'
+    | '/fire-safety/hydrant-sprinkler'
+    | '/fire-safety/maintenance'
+    | '/fire-safety/industrial'
+    | '/fire-safety/residential'
+    | '/products/hardware-components'
     | '/products/printing-and-imaging'
+    | '/products/software-licensing'
     | '/products/system-integrations'
+    | '/services/amc'
+    | '/services/backup-solutions'
+    | '/services/core-networking'
+    | '/services/enterprise-security'
+    | '/services/it-infrastructure'
+    | '/surveillance/access-control-systems'
+    | '/surveillance/biometric-rfid-solutions'
+    | '/surveillance/cctv-solutions'
+    | '/surveillance/network-surveillance-solutions'
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/contact-us'
+    | '/fire-safety/commercial'
+    | '/fire-safety/fire-detection'
+    | '/fire-safety/fire-extinguishers'
+    | '/fire-safety/fire-suppression'
+    | '/fire-safety/hydrant-sprinkler'
+    | '/fire-safety/maintenance'
+    | '/fire-safety/industrial/'
+    | '/fire-safety/residential/'
+    | '/products/hardware-components/'
     | '/products/printing-and-imaging/'
+    | '/products/software-licensing/'
     | '/products/system-integrations/'
+    | '/services/amc/'
+    | '/services/backup-solutions/'
+    | '/services/core-networking/'
+    | '/services/enterprise-security/'
+    | '/services/it-infrastructure/'
+    | '/surveillance/access-control-systems/'
+    | '/surveillance/biometric-rfid-solutions/'
+    | '/surveillance/cctv-solutions/'
+    | '/surveillance/network-surveillance-solutions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   ContactUsRoute: typeof ContactUsRoute
+  FireSafetyCommercialRoute: typeof FireSafetyCommercialRoute
+  FireSafetyFireDetectionRoute: typeof FireSafetyFireDetectionRoute
+  FireSafetyFireExtinguishersRoute: typeof FireSafetyFireExtinguishersRoute
+  FireSafetyFireSuppressionRoute: typeof FireSafetyFireSuppressionRoute
+  FireSafetyHydrantSprinklerRoute: typeof FireSafetyHydrantSprinklerRoute
+  FireSafetyMaintenanceRoute: typeof FireSafetyMaintenanceRoute
+  FireSafetyIndustrialIndexRoute: typeof FireSafetyIndustrialIndexRoute
+  FireSafetyResidentialIndexRoute: typeof FireSafetyResidentialIndexRoute
+  ProductsHardwareComponentsIndexRoute: typeof ProductsHardwareComponentsIndexRoute
   ProductsPrintingAndImagingIndexRoute: typeof ProductsPrintingAndImagingIndexRoute
+  ProductsSoftwareLicensingIndexRoute: typeof ProductsSoftwareLicensingIndexRoute
   ProductsSystemIntegrationsIndexRoute: typeof ProductsSystemIntegrationsIndexRoute
+  ServicesAmcIndexRoute: typeof ServicesAmcIndexRoute
+  ServicesBackupSolutionsIndexRoute: typeof ServicesBackupSolutionsIndexRoute
+  ServicesCoreNetworkingIndexRoute: typeof ServicesCoreNetworkingIndexRoute
+  ServicesEnterpriseSecurityIndexRoute: typeof ServicesEnterpriseSecurityIndexRoute
+  ServicesItInfrastructureIndexRoute: typeof ServicesItInfrastructureIndexRoute
+  SurveillanceAccessControlSystemsIndexRoute: typeof SurveillanceAccessControlSystemsIndexRoute
+  SurveillanceBiometricRfidSolutionsIndexRoute: typeof SurveillanceBiometricRfidSolutionsIndexRoute
+  SurveillanceCctvSolutionsIndexRoute: typeof SurveillanceCctvSolutionsIndexRoute
+  SurveillanceNetworkSurveillanceSolutionsIndexRoute: typeof SurveillanceNetworkSurveillanceSolutionsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -93,11 +368,81 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact-us': {
       id: '/contact-us'
       path: '/contact-us'
       fullPath: '/contact-us'
       preLoaderRoute: typeof ContactUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fire-safety/commercial': {
+      id: '/fire-safety/commercial'
+      path: '/fire-safety/commercial'
+      fullPath: '/fire-safety/commercial'
+      preLoaderRoute: typeof FireSafetyCommercialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fire-safety/fire-detection': {
+      id: '/fire-safety/fire-detection'
+      path: '/fire-safety/fire-detection'
+      fullPath: '/fire-safety/fire-detection'
+      preLoaderRoute: typeof FireSafetyFireDetectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fire-safety/fire-extinguishers': {
+      id: '/fire-safety/fire-extinguishers'
+      path: '/fire-safety/fire-extinguishers'
+      fullPath: '/fire-safety/fire-extinguishers'
+      preLoaderRoute: typeof FireSafetyFireExtinguishersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fire-safety/fire-suppression': {
+      id: '/fire-safety/fire-suppression'
+      path: '/fire-safety/fire-suppression'
+      fullPath: '/fire-safety/fire-suppression'
+      preLoaderRoute: typeof FireSafetyFireSuppressionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fire-safety/hydrant-sprinkler': {
+      id: '/fire-safety/hydrant-sprinkler'
+      path: '/fire-safety/hydrant-sprinkler'
+      fullPath: '/fire-safety/hydrant-sprinkler'
+      preLoaderRoute: typeof FireSafetyHydrantSprinklerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fire-safety/maintenance': {
+      id: '/fire-safety/maintenance'
+      path: '/fire-safety/maintenance'
+      fullPath: '/fire-safety/maintenance'
+      preLoaderRoute: typeof FireSafetyMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fire-safety/industrial/': {
+      id: '/fire-safety/industrial/'
+      path: '/fire-safety/industrial'
+      fullPath: '/fire-safety/industrial/'
+      preLoaderRoute: typeof FireSafetyIndustrialIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fire-safety/residential/': {
+      id: '/fire-safety/residential/'
+      path: '/fire-safety/residential'
+      fullPath: '/fire-safety/residential/'
+      preLoaderRoute: typeof FireSafetyResidentialIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/hardware-components/': {
+      id: '/products/hardware-components/'
+      path: '/products/hardware-components'
+      fullPath: '/products/hardware-components/'
+      preLoaderRoute: typeof ProductsHardwareComponentsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products/printing-and-imaging/': {
@@ -107,6 +452,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsPrintingAndImagingIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/products/software-licensing/': {
+      id: '/products/software-licensing/'
+      path: '/products/software-licensing'
+      fullPath: '/products/software-licensing/'
+      preLoaderRoute: typeof ProductsSoftwareLicensingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/products/system-integrations/': {
       id: '/products/system-integrations/'
       path: '/products/system-integrations'
@@ -114,14 +466,100 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsSystemIntegrationsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/amc/': {
+      id: '/services/amc/'
+      path: '/services/amc'
+      fullPath: '/services/amc/'
+      preLoaderRoute: typeof ServicesAmcIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/backup-solutions/': {
+      id: '/services/backup-solutions/'
+      path: '/services/backup-solutions'
+      fullPath: '/services/backup-solutions/'
+      preLoaderRoute: typeof ServicesBackupSolutionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/core-networking/': {
+      id: '/services/core-networking/'
+      path: '/services/core-networking'
+      fullPath: '/services/core-networking/'
+      preLoaderRoute: typeof ServicesCoreNetworkingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/enterprise-security/': {
+      id: '/services/enterprise-security/'
+      path: '/services/enterprise-security'
+      fullPath: '/services/enterprise-security/'
+      preLoaderRoute: typeof ServicesEnterpriseSecurityIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/it-infrastructure/': {
+      id: '/services/it-infrastructure/'
+      path: '/services/it-infrastructure'
+      fullPath: '/services/it-infrastructure/'
+      preLoaderRoute: typeof ServicesItInfrastructureIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/surveillance/access-control-systems/': {
+      id: '/surveillance/access-control-systems/'
+      path: '/surveillance/access-control-systems'
+      fullPath: '/surveillance/access-control-systems/'
+      preLoaderRoute: typeof SurveillanceAccessControlSystemsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/surveillance/biometric-rfid-solutions/': {
+      id: '/surveillance/biometric-rfid-solutions/'
+      path: '/surveillance/biometric-rfid-solutions'
+      fullPath: '/surveillance/biometric-rfid-solutions/'
+      preLoaderRoute: typeof SurveillanceBiometricRfidSolutionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/surveillance/cctv-solutions/': {
+      id: '/surveillance/cctv-solutions/'
+      path: '/surveillance/cctv-solutions'
+      fullPath: '/surveillance/cctv-solutions/'
+      preLoaderRoute: typeof SurveillanceCctvSolutionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/surveillance/network-surveillance-solutions/': {
+      id: '/surveillance/network-surveillance-solutions/'
+      path: '/surveillance/network-surveillance-solutions'
+      fullPath: '/surveillance/network-surveillance-solutions/'
+      preLoaderRoute: typeof SurveillanceNetworkSurveillanceSolutionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   ContactUsRoute: ContactUsRoute,
+  FireSafetyCommercialRoute: FireSafetyCommercialRoute,
+  FireSafetyFireDetectionRoute: FireSafetyFireDetectionRoute,
+  FireSafetyFireExtinguishersRoute: FireSafetyFireExtinguishersRoute,
+  FireSafetyFireSuppressionRoute: FireSafetyFireSuppressionRoute,
+  FireSafetyHydrantSprinklerRoute: FireSafetyHydrantSprinklerRoute,
+  FireSafetyMaintenanceRoute: FireSafetyMaintenanceRoute,
+  FireSafetyIndustrialIndexRoute: FireSafetyIndustrialIndexRoute,
+  FireSafetyResidentialIndexRoute: FireSafetyResidentialIndexRoute,
+  ProductsHardwareComponentsIndexRoute: ProductsHardwareComponentsIndexRoute,
   ProductsPrintingAndImagingIndexRoute: ProductsPrintingAndImagingIndexRoute,
+  ProductsSoftwareLicensingIndexRoute: ProductsSoftwareLicensingIndexRoute,
   ProductsSystemIntegrationsIndexRoute: ProductsSystemIntegrationsIndexRoute,
+  ServicesAmcIndexRoute: ServicesAmcIndexRoute,
+  ServicesBackupSolutionsIndexRoute: ServicesBackupSolutionsIndexRoute,
+  ServicesCoreNetworkingIndexRoute: ServicesCoreNetworkingIndexRoute,
+  ServicesEnterpriseSecurityIndexRoute: ServicesEnterpriseSecurityIndexRoute,
+  ServicesItInfrastructureIndexRoute: ServicesItInfrastructureIndexRoute,
+  SurveillanceAccessControlSystemsIndexRoute:
+    SurveillanceAccessControlSystemsIndexRoute,
+  SurveillanceBiometricRfidSolutionsIndexRoute:
+    SurveillanceBiometricRfidSolutionsIndexRoute,
+  SurveillanceCctvSolutionsIndexRoute: SurveillanceCctvSolutionsIndexRoute,
+  SurveillanceNetworkSurveillanceSolutionsIndexRoute:
+    SurveillanceNetworkSurveillanceSolutionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

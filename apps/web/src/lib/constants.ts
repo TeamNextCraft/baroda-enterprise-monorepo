@@ -16,30 +16,34 @@ export const productItems: Product[] = [
 	{
 		id: 1,
 		name: "Printing & Imaging",
-		image: "/images/product1.jpg",
+		image: "/images/navigation/products/printing-and-imaging.jpg",
 		href: "/products/printing-and-imaging/",
-		description: "Description for Product 1",
+		description:
+			"Printers, multifunction devices and document imaging solutions for the workplace.",
 	},
 	{
 		id: 2,
 		name: "System Integrations",
-		image: "/images/product2.jpg",
+		image: "/images/navigation/products/system-integrations.jpg",
 		href: "/products/system-integrations/",
-		description: "Description for Product 2",
+		description:
+			"Connect business systems, applications and infrastructure into a coordinated environment.",
 	},
 	{
 		id: 3,
 		name: "Software Licensing",
-		image: "/images/product3.jpg",
+		image: "/images/navigation/products/software-licensing.jpg",
 		href: "/products/software-licensing/",
-		description: "Description for Product 3",
+		description:
+			"Software procurement, licensing guidance, renewals and deployment support.",
 	},
 	{
 		id: 4,
 		name: "Hardware Components",
-		image: "/images/product4.jpg",
+		image: "/images/navigation/products/hardware-components.jpg",
 		href: "/products/hardware-components/",
-		description: "Description for Product 4",
+		description:
+			"Business computers, servers, networking equipment, peripherals and components.",
 	},
 ];
 
@@ -47,38 +51,42 @@ export const serviceItems: Service[] = [
 	{
 		id: 1,
 		name: "Annual Maintenance Contract (AMC)",
-		description: "Description for Service 1",
+		image: "/images/navigation/services/amc.jpg",
+		description:
+			"Planned maintenance and technical support for covered IT equipment and systems.",
 		href: "/services/amc/",
 	},
 	{
 		id: 2,
 		name: "Core Networking & Rack Solutions",
-		description: "Description for Service 2",
+		image: "/images/navigation/services/core-networking.jpg",
+		description:
+			"Structured cabling, network equipment, racks and business connectivity solutions.",
 		href: "/services/core-networking/",
 	},
 	{
 		id: 3,
 		name: "IT Infrastructure Management",
-		description: "Description for Service 3",
+		image: "/images/navigation/services/it-infrastructure.jpg",
+		description:
+			"Server, storage, endpoint and hybrid infrastructure planning and implementation.",
 		href: "/services/it-infrastructure/",
 	},
 	{
 		id: 4,
 		name: "Backup Solutions",
-		description: "Description for Service 4",
+		image: "/images/navigation/services/backup-solutions.jpg",
+		description:
+			"Data backup planning, implementation and recovery-readiness support.",
 		href: "/services/backup-solutions/",
 	},
 	{
 		id: 5,
 		name: "Enterprise Security",
-		description: "Description for Service 5",
+		image: "/images/navigation/services/enterprise-security.jpg",
+		description:
+			"Network, endpoint and access protection for business IT environments.",
 		href: "/services/enterprise-security/",
-	},
-	{
-		id: 6,
-		name: "Audio Video Conference",
-		description: "Description for Service 6",
-		href: "/services/audio-video-conference/",
 	},
 ];
 
@@ -86,25 +94,102 @@ export const surveillanceSystems: SurveillanceSystem[] = [
 	{
 		id: 1,
 		name: "CCTV Solutions",
-		description: "Description for Surveillance System 1",
+		image: "/images/navigation/surveillance/cctv-solutions.jpg",
+		description:
+			"Camera systems, recording equipment and video coverage planning for properties.",
 		href: "/surveillance/cctv-solutions/",
 	},
 	{
 		id: 2,
 		name: "Access Control Systems",
-		description: "Description for Surveillance System 2",
+		image: "/images/navigation/surveillance/access-control.jpg",
+		description:
+			"Manage entry points with electronic access readers, controllers and credentials.",
 		href: "/surveillance/access-control-systems/",
 	},
 	{
 		id: 3,
 		name: "Biometric & RFID Solutions",
-		description: "Description for Surveillance System 3",
+		image: "/images/navigation/surveillance/biometric-rfid.jpg",
+		description:
+			"Biometric and RFID-based identification for access and workforce workflows.",
 		href: "/surveillance/biometric-rfid-solutions/",
 	},
 	{
 		id: 4,
 		name: "Network Surveillance Solutions",
-		description: "Description for Surveillance System 4",
+		image: "/images/navigation/surveillance/network-surveillance.jpg",
+		description:
+			"IP cameras, network video recording and connected surveillance infrastructure.",
 		href: "/surveillance/network-surveillance-solutions/",
+	},
+];
+
+export const fireSafetyGroups = [
+	{
+		title: "Building Solutions",
+		items: [
+			{
+				name: "Residential Fire Safety",
+				image: "/images/navigation/fire-safety/residential.jpg",
+				href: "/fire-safety/residential",
+				description:
+					"Fire protection planning for apartments, homes and housing societies.",
+			},
+			{
+				name: "Industrial Fire Safety",
+				image: "/images/navigation/fire-safety/industrial.jpg",
+				href: "/fire-safety/industrial",
+				description:
+					"Fire protection systems for factories, production areas and warehouses.",
+			},
+			{
+				name: "Commercial Fire Safety",
+				image: "/images/navigation/fire-safety/commercial.jpg",
+				href: "/fire-safety/commercial",
+				description:
+					"Fire and life-safety solutions for offices and commercial properties.",
+			},
+		],
+	},
+	{
+		title: "Systems & Services",
+		items: [
+			{
+				name: "Fire Detection & Alarm",
+				image: "/images/navigation/fire-safety/fire-detection.jpg",
+				href: "/fire-safety/fire-detection",
+				description:
+					"Detection devices, alarm panels and occupant notification systems.",
+			},
+			{
+				name: "Fire Suppression Systems",
+				image: "/images/navigation/fire-safety/fire-suppression.jpg",
+				href: "/fire-safety/fire-suppression",
+				description:
+					"Water-based and specialist suppression options for assessed fire hazards.",
+			},
+			{
+				name: "Fire Hydrant & Sprinkler",
+				image: "/images/navigation/fire-safety/hydrant-sprinkler.jpg",
+				href: "/fire-safety/hydrant-sprinkler",
+				description:
+					"Hydrant networks, sprinkler piping and associated fire-water equipment.",
+			},
+			{
+				name: "Fire Extinguishers",
+				image: "/images/navigation/fire-safety/fire-extinguishers.jpg",
+				href: "/fire-safety/fire-extinguishers",
+				description:
+					"Portable fire extinguishers selected for the relevant fire risks.",
+			},
+			{
+				name: "Maintenance & Inspection",
+				image: "/images/navigation/fire-safety/maintenance.jpg",
+				href: "/fire-safety/maintenance",
+				description:
+					"Inspection, testing and maintenance support for installed fire systems.",
+			},
+		],
 	},
 ];
